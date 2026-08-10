@@ -1,0 +1,22 @@
+name: bump outdated formulae
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  bump:
+    runs-on: macos-latest
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@df4b09108a1de9d6f995fe68f302b3f68bd6d2ef # 2026.07.20.1
+        with:
+          token: ${{ secrets.HOMEBREW_TAP_BUMP_TOKEN }}
+
+      - name: Bump outdated formulae
+        uses: Homebrew/actions/bump-packages@df4b09108a1de9d6f995fe68f302b3f68bd6d2ef # 2026.07.20.1
+        with:
+          token: ${{ secrets.HOMEBREW_TAP_BUMP_TOKEN }}
+          formulae: agent-statusline
+          fork: false
