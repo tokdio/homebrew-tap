@@ -1,18 +1,29 @@
-# Poudelprakash Agent-statusline
+# homebrew-agent-statusline
 
-## How do I install these formulae?
+Homebrew tap for [agent-statusline](https://github.com/poudelprakash/agent-statusline), a three-row statusline for Claude Code and other agentic coding CLIs.
 
-`brew install poudelprakash/agent-statusline/<formula>`
+## Install
 
-Or `brew tap poudelprakash/agent-statusline` and then `brew install <formula>`.
+```bash
+brew install poudelprakash/agent-statusline/agent-statusline
+```
 
-Or, in a `brew bundle` `Brewfile`:
+Or tap it first, then install by formula name:
+
+```bash
+brew tap poudelprakash/agent-statusline
+brew install agent-statusline
+```
+
+Or in a `brew bundle` `Brewfile`:
 
 ```ruby
 tap "poudelprakash/agent-statusline"
-brew "<formula>"
+brew "agent-statusline"
 ```
+
+Then point Claude Code at the installed binary in `~/.claude/settings.json` — `brew info agent-statusline` prints the exact path and `statusLine` block to use.
 
 ## Documentation
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+See the [main repo](https://github.com/poudelprakash/agent-statusline) for what the statusline shows and how it's built. `brew help`, `man brew`, or [Homebrew's docs](https://docs.brew.sh) for tap/formula mechanics.
