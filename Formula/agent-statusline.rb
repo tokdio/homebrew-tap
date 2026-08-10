@@ -33,7 +33,7 @@ class AgentStatusline < Formula
 
   test do
     payload = '{"model":{"display_name":"Test Model"}}'
-    output = pipe_output("#{bin}/agent-statusline", payload, 0)
+    output = pipe_output(bin/"agent-statusline", payload, 0)
     assert_match "Test Model", output
   end
 end
