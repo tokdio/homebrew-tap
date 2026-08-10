@@ -1,8 +1,8 @@
 class AgentStatusline < Formula
   desc "Three-row statusline for Claude Code and other agentic coding CLIs"
-  homepage "https://github.com/tokdio/agent-statusline"
-  url "https://github.com/tokdio/agent-statusline/archive/refs/tags/v1.0.2.tar.gz"
-  sha256 "80d8c9416ba150c5fa5717b23dbc2a9b2c1a9a2629ca92a08298acdedc4d8b29"
+  homepage "https://github.com/poudelprakash/agent-statusline"
+  url "https://github.com/poudelprakash/agent-statusline/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "d818eab3f6d2d346c56db7f5bd47e50ef2cc430597dc2a06676555297e2f5fb9"
   license "MIT"
 
   depends_on "git"
